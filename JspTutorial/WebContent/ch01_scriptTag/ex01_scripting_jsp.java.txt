@@ -104,7 +104,8 @@ public final class ex01_005fscripting_jsp extends org.apache.jasper.runtime.Http
   public void _jspDestroy() {
   }
 
-  public void _jspService(final javax.servlet.http.HttpServletRequest request, final javax.servlet.http.HttpServletResponse response)
+  // 내장 객체는 _jspService()메서드 내부에 있는 것을 확인할 수 있음
+  public void _jspService(final javax.servlet.http.HttpServletRequest request, final javax.servlet.http.HttpServletResponse response) // 매개변수로 선언된 request, response 내장 객체
       throws java.io.IOException, javax.servlet.ServletException {
 
     if (!javax.servlet.DispatcherType.ERROR.equals(request.getDispatcherType())) {
@@ -119,7 +120,8 @@ public final class ex01_005fscripting_jsp extends org.apache.jasper.runtime.Http
         return;
       }
     }
-
+	
+	// 미리 선언된 기타 내장 객체들
     final javax.servlet.jsp.PageContext pageContext;
     javax.servlet.http.HttpSession session = null;
     final javax.servlet.ServletContext application;
